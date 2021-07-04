@@ -48,3 +48,17 @@ function initMap() {
     map: map,
   });
 }
+
+
+function normalize() {
+  console.log(this.coords.map(n => n / this.length));
+}
+normalize.call({coords: [0, 2, 3], length: 5});
+
+let coord = {
+  arr: [0, 2, 3],
+  length: 5,
+  normalize
+};
+
+coord.normalize
